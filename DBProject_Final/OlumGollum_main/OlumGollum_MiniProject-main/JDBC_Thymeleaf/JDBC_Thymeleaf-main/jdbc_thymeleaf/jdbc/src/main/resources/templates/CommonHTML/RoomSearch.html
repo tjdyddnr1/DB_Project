@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>방 검색하는 페이지</title>
+    <link rel="stylesheet" th:href="@{/css/RoomInfoPage.css}">
+</head>
+<body class="container">
+<div class="form-container">
+    <h1 class="title">Gollum</h1>
+    <!--    Controller에 해당부분으로 POSTING!-->
+    <form th:action="@{/RoomSearch/Search}" th:object="${SearchElement}" method="post">
+        <div>
+            <label for="address">지역검색</label>
+            <input type="text" id="address" th:field="*{address}"/>
+        </div>
+        <div>
+            <label for="trade_method">거래방식(매매,전세,월세)</label>
+            <input type="text" id="trade_method" th:field="*{trade_method}"/>
+        </div>
+        <div>
+            <p>해당되는 거래방식에 따른 가격검색(얼마 이하)!</p>
+        </div>
+        <div>
+            <label for="deposit">보증금(만원)</label>
+            <input type="text" id="deposit" th:field="*{deposit}"/>
+        </div>
+        <div>
+            <label for="monthly">월세(만원)</label>
+            <input type="text" id="monthly" th:field="*{monthly}"/>
+        </div>
+        <div>
+            <label for="jeonsegeum">전세금(만원)</label>
+            <input type="text" id="jeonsegeum" th:field="*{jeonsegeum}"/>
+        </div>
+        <div>
+            <label for="Sale_price">매매가(만원)</label>
+            <input type="text" id="Sale_price" th:field="*{Sale_price}"/>
+        </div>
+        <div>
+            <label for="remark">옵션</label>
+            <input type="text" id="remark" th:field="*{remark}"/>
+        </div>
+        <div>
+            <!--    Controller에 해당 부분으로 이동!!-->
+            <button class="page-button">방 검색하기</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Olum Delete</title>
+    <link rel="stylesheet" th:href="@{/css/TitlePontLow.css}">
+</head>
+<body class="container">
+<div class="form-container">
+    <h1 class="title">정말 삭제하시겠습니까?</h1>
+    <!--    Controller에 해당부분으로 POSTING!-->
+    <form th:action="@{/MyPage/OulmDelete}" th:object="${DeleteNum}" method="post">
+        <div>
+            <label for="house_num">삭제할 매물번호</label>
+            <input type="text" id="house_num" th:field="*{house_num}" />
+        </div>
+        <div>
+            <button class="page-button">방 삭제하기</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

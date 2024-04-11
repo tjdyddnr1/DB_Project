@@ -1,0 +1,75 @@
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border:1px solid #ccc;
+}
+td {
+    background-color: beige;
+}
+
+thead {
+    background-color: cornflowerblue;
+    color: white;
+}
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(11, 54, 103, 0.5);
+  color: rgb(151, 115, 221);
+  text-align: center; /* 가운데 정렬 */
+  margin-top: 70px; /* 위로 70px 이동 */
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  .page-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .page-button:hover {
+    background-color: #45a049;
+  }
+  button {
+    padding: 20px 40px;
+    margin: 0 70px; /* 나가기 버튼의 크기만큼 띄우기 */
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+.container {
+    background-image: url('../images/골룸.jpg');
+    background-size: cover; /* 이미지가 화면에 맞게 확대/축소되도록 설정 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+    background-attachment: fixed; /* 스크롤 시 배경 이미지가 고정됨 */
+}

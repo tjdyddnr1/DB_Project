@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminMyPage</title>
+    <link rel="stylesheet" th:href="@{/css/UserOlumGollumMain.css}">
+</head>
+<body>
+<h1 class="title">마이페이지</h1>
+<div class="button-container">
+    <div class="button-row">
+        <!--        Controller에 해당 부분으로 이동!-->
+        <a th:href="@{/MyPage/AdminInfoUpdate}">
+            <button>회원정보변경</button>
+        </a>
+        <a th:href="@{/MyPage/LoveRoomList}">
+            <button>찜한방목록</button>
+        </a>
+        <a th:href="@{/MyPage/LoveRoomDelete}">
+            <button>찜삭제</button>
+        </a>
+    </div>
+    <div class="button-row">
+        <!--        Controller에 해당 부분으로 이동!-->
+        <a th:href="@{/MyPage/OulmList}">
+            <button>올룸목록</button>
+        </a>
+        <a th:href="@{/MyPage/OulmUpdate}">
+            <button>올룸수정</button>
+        </a>
+        <a th:href="@{/MyPage/OulmDelete}">
+            <button>올룸삭제</button>
+        </a>
+    </div>
+    <div class="button-row">
+        <a th:href="@{/Page/AdminMainPage}">
+            <button>돌아가기</button>
+        </a>
+        <a th:href="@{/MyPage/UserDelete}">
+            <button>회원탈퇴</button>
+        </a>
+        <a th:href="@{/Page/FirstPage}">
+            <button>로그아웃</button>
+        </a>
+    </div>
+
+
+</div>
+</body>
+</html>

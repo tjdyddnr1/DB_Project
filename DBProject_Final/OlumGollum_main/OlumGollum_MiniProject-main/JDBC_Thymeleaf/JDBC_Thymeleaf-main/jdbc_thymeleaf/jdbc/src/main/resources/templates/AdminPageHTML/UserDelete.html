@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+    <link rel="stylesheet" th:href="@{/css/TitlePontLow.css}">
+</head>
+<body class="container">
+<div class="form-container">
+    <h1 class="title">정말 삭제하시겠습니까?</h1>
+    <!--    Controller에 해당부분으로 POSTING!-->
+    <form th:action="@{/Admin/UserDelete}" th:object="${id}" method="post">
+        <div>
+            <label for="Userid">삭제할 유저 아이디</label>
+            <input type="text" id="Userid" th:field="*{Userid}" />
+        </div>
+        <div>
+            <button class="page-button">유저 삭제하기</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

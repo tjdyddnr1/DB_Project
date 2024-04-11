@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/UserInfoPage.css}">
+</head>
+<body class="container">
+<h2>수정된 결과</h2>
+<table >
+    <thead>
+    <tr>
+        <th>아이디</th>
+        <th>패스워드</th>
+        <th>이름</th>
+        <th>주민번호 앞자리</th>
+        <th>전화번호(-빼고)</th>
+        <th>주소</th>
+        <th>성별</th>
+        <th>닉네임</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="MyInfo : ${MyInfos}">
+        <td th:text="${MyInfo.user_mail}"></td>
+        <td th:text="${MyInfo.password}"></td>
+        <td th:text="${MyInfo.name}"></td>
+        <td th:text="${MyInfo.first_id_cardnum}"></td>
+        <td th:text="${MyInfo.phone_number}"></td>
+        <td th:text="${MyInfo.address}"></td>
+        <td th:text="${MyInfo.gender}"></td>
+        <td th:text="${MyInfo.nickname}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <!--Controller에 해당 부분으로 이동!!-->
+    <a th:href="@{/Page/UserMypage}">
+        <button>이전화면으로 돌아가기</button>
+    </a>
+</div>
+</body>
+</html>

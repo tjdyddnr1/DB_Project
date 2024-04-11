@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+    <link rel="stylesheet" th:href="@{/css/UserInfoPage.css}">
+</head>
+<body class="container">
+<div class="form-container">
+    <h1 class="title">회원정보변경</h1>
+    <!--    Controller에 해당부분으로 POSTING!-->
+    <form th:action="@{/MyPage/InfoUpdate}" th:object="${UpdateElements}" method="post">
+        <div>
+            <label for="USER_MAIL">아이디</label>
+            <input type="text" id="USER_MAIL" th:field="*{USER_MAIL}" />
+        </div>
+        <div>
+            <label for="PASSWORD">패스워드</label>
+            <input type="text" id="PASSWORD" th:field="*{PASSWORD}" />
+        </div>
+        <div>
+            <label for="NAME">이름</label>
+            <input type="text" id="NAME" th:field="*{NAME}" />
+        </div>
+        <div>
+            <label for="PHONE_NUMBER">전화번호</label>
+            <input type="text" id="PHONE_NUMBER" th:field="*{PHONE_NUMBER}" />
+        </div>
+        <div>
+            <label for="ADDRESS">주소</label>
+            <input type="text" id="ADDRESS" th:field="*{ADDRESS}" />
+        </div>
+        <div>
+            <label for="NICKNAME">닉네임</label>
+            <input type="text" id="NICKNAME" th:field="*{NICKNAME}" />
+        </div>
+        <div>
+            <button class="page-button">수정하기</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

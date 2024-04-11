@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminOlumgollumMainPage</title>
+    <link rel="stylesheet" th:href="@{/css/AdminOlumGollumMain.css}">
+</head>
+<body>
+<h1 class="title">Admin_Olumgollum</h1>
+<div class="button-container">
+    <div class="button-row">
+        <!--        Controller에 해당 부분으로 이동!-->
+        <a th:href="@{/Admin/UserList}">
+            <button>전체회원목록</button>
+        </a>
+        <a th:href="@{/Admin/UserDelete}">
+            <button>회원삭제</button>
+        </a>
+    </div>
+    <div class="button-row">
+        <a th:href="@{/Admin/RoomList}">
+            <button>전체매물목록</button>
+        </a>
+        <a th:href="@{/Admin/RoomDelete}">
+            <button>매물삭제</button>
+        </a>
+        <a th:href="@{/Page/AdminMainPage}">
+            <button>이전 페이지로</button>
+        </a>
+    </div>
+    <div class="button-row">
+        <a th:href="@{/Admin/AdminList}">
+            <button>관리자목록</button>
+        </a>
+        <a th:href="@{/Admin/AdminInsert}">
+            <button>관리자 계정 추가</button>
+        </a>
+        <a th:href="@{/Admin/AdminDelete}">
+            <button>관리자 계정 삭제</button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

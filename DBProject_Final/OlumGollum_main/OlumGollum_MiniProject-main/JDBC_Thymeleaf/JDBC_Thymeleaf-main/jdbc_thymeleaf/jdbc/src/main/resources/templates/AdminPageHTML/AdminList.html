@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자List</title>
+    <link rel="stylesheet" th:href="@{/css/RoomInfoPage.css}">
+</head>
+<body class="container">
+<h2>관리자 리스트</h2>
+<table >
+    <thead>
+    <tr>
+        <th>아이디</th>
+        <th>패스워드</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="AdminInfo : ${admin}">
+        <td th:text="${AdminInfo.ADM_ID}"></td>
+        <td th:text="${AdminInfo.ADM_PW}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <!--Controller에 해당 부분으로 이동!!-->
+    <a th:href="@{/Page/AdminManage}">
+        <button>이전화면으로 돌아가기</button>
+    </a>
+</div>
+</body>
+</html>

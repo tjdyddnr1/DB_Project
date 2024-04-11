@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/RoomInfoPage.css}">
+</head>
+<body class="container">
+<h2>OLUM목록</h2>
+<table>
+    <thead>
+    <tr>
+        <th>매물번호</th>
+        <th>등록자 아이디</th>
+        <th>사진URL</th>
+        <th>거래방식</th>
+        <th>보증금(만원)</th>
+        <th>월세(만원)</th>
+        <th>전세금(만원)</th>
+        <th>매매가(만원)</th>
+        <th>평수</th>
+        <th>사용 승인일</th>
+        <th>매물주소</th>
+        <th>층수</th>
+        <th>집주인 전화번호</th>
+        <th>매물 등록일</th>
+        <th>비고(옵션)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="Oulm:${OulmList}">
+        <td th:text="${Oulm.house_num}"></td>
+        <td th:text="${Oulm.user_id}"></td>
+        <td th:text="${Oulm.photo_url}"></td>
+        <td th:text="${Oulm.trade_method}"></td>
+        <td th:text="${Oulm.deposit}"></td>
+        <td th:text="${Oulm.monthly}"></td>
+        <td th:text="${Oulm.jeonsegeum}"></td>
+        <td th:text="${Oulm.Sale_price}"></td>
+        <td th:text="${Oulm.area}"></td>
+        <td th:text="${Oulm.accept_date}"></td>
+        <td th:text="${Oulm.address}"></td>
+        <td th:text="${Oulm.floor1}"></td>
+        <td th:text="${Oulm.phonenumber}"></td>
+        <td th:text="${Oulm.regit_date}"></td>
+        <td th:text="${Oulm.remark}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <!--Controller에 해당 부분으로 이동!!-->
+    <a th:href="@{/Page/UserMyPage}">
+        <button>이전화면으로 돌아가기</button>
+    </a>
+</div>
+</body>
+</html>

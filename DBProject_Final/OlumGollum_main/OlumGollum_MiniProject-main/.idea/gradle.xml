@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/OlumGollum_MiniProject-main/JDBC_Thymeleaf/JDBC_Thymeleaf-main/jdbc_thymeleaf/jdbc" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/OlumGollum_MiniProject-main/JDBC_Thymeleaf/JDBC_Thymeleaf-main/jdbc_thymeleaf/jdbc" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

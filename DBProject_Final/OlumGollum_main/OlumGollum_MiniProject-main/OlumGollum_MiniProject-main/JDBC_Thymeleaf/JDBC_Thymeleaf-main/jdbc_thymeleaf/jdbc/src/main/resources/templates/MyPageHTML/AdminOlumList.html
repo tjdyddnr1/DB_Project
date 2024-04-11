@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/RoomInfoPage.css}">
+</head>
+<body class="container">
+<h2>OLUM 목록</h2>
+<table>
+    <thead>
+    <tr>
+        <th>매물번호</th>
+        <th>집주인아이디</th>
+        <th>사진URL</th>
+        <th>거래방식</th>
+        <th>보증금</th>
+        <th>월세</th>
+        <th>전세금</th>
+        <th>매매가</th>
+        <th>면적(평수)</th>
+        <th>사용 승인일</th>
+        <th>주소</th>
+        <th>층수</th>
+        <th>전화번호</th>
+        <th>매물 등록일</th>
+        <th>옵션</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="RoomInfo:${OulmList}">
+        <td th:text="${RoomInfo.house_num}"></td>
+        <td th:text="${RoomInfo.user_id}"></td>
+        <td th:text="${RoomInfo.photo_url}"></td>
+        <td th:text="${RoomInfo.trade_method}"></td>
+        <td th:text="${RoomInfo.deposit}"></td>
+        <td th:text="${RoomInfo.monthly}"></td>
+        <td th:text="${RoomInfo.jeonsegeum}"></td>
+        <td th:text="${RoomInfo.Sale_price}"></td>
+        <td th:text="${RoomInfo.area}"></td>
+        <td th:text="${RoomInfo.accept_date}"></td>
+        <td th:text="${RoomInfo.address}"></td>
+        <td th:text="${RoomInfo.floor1}"></td>
+        <td th:text="${RoomInfo.phonenumber}"></td>
+        <td th:text="${RoomInfo.regit_date}"></td>
+        <td th:text="${RoomInfo.remark}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <!--Controller에 해당 부분으로 이동!!-->
+    <a th:href="@{/Page/AdminMyPage}">
+        <button>이전화면으로 돌아가기</button>
+    </a>
+</div>
+</body>
+</html>

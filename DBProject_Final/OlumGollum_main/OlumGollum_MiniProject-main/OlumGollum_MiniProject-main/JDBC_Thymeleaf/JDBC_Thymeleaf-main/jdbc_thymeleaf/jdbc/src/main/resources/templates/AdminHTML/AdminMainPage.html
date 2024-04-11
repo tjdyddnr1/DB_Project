@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminOlumgollumMainPage</title>
+    <link rel="stylesheet" th:href="@{/css/AdminOlumGollumMain.css}">
+</head>
+<body>
+<h1 class="title">Admin_Olumgollum</h1>
+<div class="button-container">
+    <div class="button-row">
+<!--        Controller에 해당 부분으로 이동!-->
+        <a th:href="@{/RoomUp/RoomInsert}">
+            <button>방 올룸</button>
+        </a>
+        <a th:href="@{/RoomSearch/Search}">
+            <button>방 골룸</button>
+        </a>
+    </div>
+    <div class="button-row">
+        <a th:href="@{/Page/AdminManage}">
+            <button>관리자 페이지</button>
+        </a>
+        <a th:href="@{/Page/AdminMyPage}">
+            <button>마이페이지</button>
+        </a>
+    </div>
+
+</div>
+</body>
+</html>
